@@ -1,0 +1,36 @@
+*{
+   padding: 0px;
+   margin: 0px;
+}
+
+.Contenedor{
+    width: 50%;
+    margin: auto;
+    
+}
+.title{
+    font-family: sans-serif;
+    margin: 10px 0px;
+}
+.Contenedor form input{
+   width: 100%;
+   height: 35px;
+   margin-bottom: 10px;
+}
+button{
+    height: 35px;
+    width: 100px;
+    color: white;
+    background: blue;
+    border-radius: 5px;
+    margin-top: 20px;
+
+}
+button:hover{
+    color: blue;
+    background-color: rgba(146, 141, 141, 0.952);
+}
+fieldset{
+  width: 100%;
+  padding:10px;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Cabeza de la pagina</h1>
+    <p id="parrafo">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi numquam
+      expedita aliquam tenetur enim optio commodi distinctio eos iste quam
+      veritatis, impedit quis perferendis eaque dolorem eius in ratione ut!
+    </p>
+    <p class="Parrafos">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum dolore
+      vitae earum sapiente enim asperiores quam pariatur obcaecati atque quae
+      provident reiciendis, accusantium voluptates saepe nobis cupiditate odio
+      natus beatae!
+    </p>
+    <script>
+      //Devuelve toda la etiqueta con el id especificado
+      let seleccionID = document.getElementById("parrafo");
+
+      //Selecciona los tags que deseemos
+      //devuelve una array, con cada una de las etiquetas de tipo p
+      let parrafos = document.getElementsByTagName("p");
+      console.log(parrafos.length);
+
+      //Iteramos los elementos uno a uno
+      for (let elementos of parrafos) {
+        console.log(elementos.innerHTML);
+      }
+
+      //selecciona todos los elementos que tengan la clase
+      let seleccionClass = document.getElementsByClassName('Parrafos');
+      //devuelve un array
+      console.log(seleccionClass.length);
+      console.log(seleccionClass[0].innerHTML);
+
+      //podemos manipular la etiqueta
+      seleccionClass[0].innerHTML = 'Nuevo parrafo';
+
+      let seleccionQuerry = document.querySelectorAll("p.parrafos");
+      console.log(seleccionQuerry.length);
+
+    </script>
+  </body>
+</html>

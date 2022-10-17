@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/stylesheet.css">
+    <title>Aplicacion Calculadora</title>
+  </head>
+  <body>
+    <div class="Contenedor">
+
+      <h1 class="title">Aplicacion Calculadora</h1>
+
+      <form>
+        <fieldset>
+          <legend>Calculadora</legend>
+        <label for="cuadro1">Operando A</label><br />
+        <input type="number" name="valor1" id="cuadro1" /><br />
+        
+        <label for="cuadro2">Operando B</label><br />
+        <input type="number" name="valor2" id="cuadro2" /><br />
+
+       
+        </fieldset>
+      </form>
+      <br/>
+      <button id="sumar" onclick="sumar()">Sumar</button>
+      <button id='multiplicar' onclick="multiplicar()">multiplicar</button>
+      <button id="Dividir" onclick="dividir()">Dividir</button>
+      <button id="restar" onclick="restar()">Resar</button>
+      <br><br>
+      <div >
+        <fieldset>
+          <legend>Resultado</legend>
+          <p id= 'show'></p>
+        </fieldset>
+      </div>
+    </div>
+    
+    <script src ='/JS/app.js'></script>
+  </body>
+  </html>

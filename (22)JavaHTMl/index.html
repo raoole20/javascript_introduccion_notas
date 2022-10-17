@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>EJEMPLO DOM Con JavaScript</title>
+</head>
+<body>
+    <h1 id='cabecero'>Ejemplo Dom</h1>
+    <p id = 'parrafo'>Saludos</p>
+    <p id = 'parrafo1'>otro parrafo</p>
+
+ <!--escrip debe estar antes de los objetos con los que deseemos interaccionar --> 
+
+<script>
+    console.log('Saludo desde javaScript')
+    //Para acceder al cabecero
+
+    let cabecero = document.getElementById('cabecero').innerHTML;
+    //Las etiquetas de html, en java se leen como objetos, por lo tanto, poseen atributos y metodos
+    console.log( 'valor cabecero : ' + cabecero);
+
+    let text0 = document.getElementById('parrafo');
+    console.log(text0);
+
+    //La propiedad innerHTML, no solo sirve para mostrar los objetos en cnsola, tambien se puede usar
+    //para modificar los valores de las etiquetas. Acontinuacion se muestra un ejemplo:
+
+    text0.innerHTML = "nuevo texto";
+    let cabecero2 = document.getElementById('cabecero');
+    cabecero2.innerHTML = "Nuevo Cabecero";
+    console.log(cabecero);
+
+    //Con el metodo getElementsByTagName se pueden iterar todos los elementos de una misma etiqueta
+    //Devuelve un array
+
+    let parrafos = document.getElementsByTagName('p');
+    console.log(parrafos.length);
+
+    for (let i = 0; i < parrafos.length; i++) {
+        console.log(parrafos[i].innerHTML);
+    }
+
+</script>
+
+
+
+</body>
+</html>

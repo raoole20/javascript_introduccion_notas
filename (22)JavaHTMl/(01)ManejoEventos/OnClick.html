@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Eventos</title>
+  </head>
+  <body>
+
+
+    <!--Podemos jacer los eventos directamentes desde javaScript-->
+    <h1 id="titulo">Asociar eventos</h1>
+    <br />
+
+    <div id="mostrar"></div>
+
+    <script>
+      //Funcion de tipo callback
+      document.getElementById("titulo").onclick = cambiarTexto;
+      //Con esto podemos cambiar cualquier parte de nuestra pagina
+      function cambiarTexto() {
+        mostrar.innerHTML = "<h2>Nevo titulo</h2>";
+      }
+    </script>
+  </body>
+</html>

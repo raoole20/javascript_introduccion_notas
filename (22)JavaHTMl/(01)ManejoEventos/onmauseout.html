@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+</head>
+<body>
+
+    <h1 id="titulo" onmouseout="this.style.color = 'white'" onmouseover="this.style.color = 'blue' ">tituloooooooooo</h1>
+    <h1 id="titulo2" onmousedown="rojo(this)" onmouseup= "azul(this)" onclick="verde(this)">titulo 2</h1>
+    <br>
+    <script>
+        function rojo( titulo ){
+            titulo.style.color = "red";
+        }
+        function azul( tituo ){
+            titulo.style.color = 'blue';
+        }
+        function verde( titulo ){
+            titulo.style.color = 'green';
+        }
+    </script>
+</body>
+</html>

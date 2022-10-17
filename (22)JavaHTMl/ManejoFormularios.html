@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Formulario</title>
+  </head>
+  <body>
+    <form id="formulario">
+      <label for="nombre">Nombre</label><br />
+      <input type="text" name="nombre" value="Juana" id="nombre" /><br />
+      <label for="apellido">Apellido</label><br />
+      <input type="text" name="apellido" value="Arco" id="apellido" /><br />
+    </form>
+    <button onclick="mostrarValores()">Mostrar</button>
+
+    <div id="body">
+        <p id='parrafo'></p>
+    </div>
+    <script>
+      function mostrarValores() {
+        let formulario =  document.forms['formulario'];
+        let texto = "";
+        for (let elemento of formulario) {
+            texto += elemento.value + '<br>'
+        }
+        console.log(texto);
+        //document.getElementById('body').innerHTML = texto;
+
+        //Manera de iterar el arrglo de manera individual
+        let nombre = formulario['nombre'];
+        let apellido = formulario['apellido'];
+        
+        texto = nombre.value + ' <br>' + apellido.value;
+
+        document.getElementById('body').innerHTML = texto;
+        
+      }
+    </script>
+  </body>
+</html>

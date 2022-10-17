@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Manejo de documeto</h1>
+
+    <br>
+    <form id='forma'>
+    nombre: <input type="text" id="nombre">
+
+    <br><br>
+    
+    apellido <input type="text" id="apellido">
+    </form>
+    <script>
+        //Cuando delegamos todo el envento a un item que tiene varios item en su interior se añade un parametro mas
+        //para indicar que tambien será modificado
+        const forma = getElementById('forma');
+
+        forma.addEventListener('focus', ( evento ) => {
+            event.target.style.background = 'pink';
+        }, true);
+        forma.addEventListener('blur', ( evento ) => {
+            event.target.style.background = '';
+        },true);
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eventos</title>
+</head>
+<body>
+    
+    <h1 id="titulo">Manejo de documeto</h1>
+
+    <br>
+    nombre: <input type="text" id="nombre">
+
+    <br><br>
+    
+    apellido <input type="text" id="apellido">
+
+    <script>
+        //Estos eventos, tendran los mismos nosmbres que los anteriores pero sin el on
+        //La funcion de cambiar, es un funcion de tipo callback
+        //De esta forma simplificamos el codifo html
+        document.getElementById('nombre').addEventListener('focus', cambiar);
+        document.getElementById('nombre').addEventListener('blur', regresar);
+
+        document.getElementById('apellido').addEventListener('focus', cambiar);
+        document.getElementById('apellido').addEventListener('blur', regresar);
+
+
+        function cambiar( evento ){
+            //Recibimos el evento
+            let componente = evento.target;
+            componente.style.background = 'blue';
+        }
+        function regresar( evento ){
+            evento.target.style.background = 'none';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manejo dom</title>
+</head>
+<body>
+    <h1>Document.write</h1>
+    <p>Podemos usar este metodo para escribir en la pagina 
+       pero, si por alguna razon deseamos usar lo otra vez, una
+       vez cargada la pagina, el metodo sobreescribira todos los valores en 
+       la pagina
+    </p>
+    <button onclick="mostrar()">Saludar</button><br>
+    <hr>
+    <script>
+        document.write('saludos desde java')
+
+        function mostrar(){
+            document.write('adios');
+        }
+    </script>
+</body>
+</html>

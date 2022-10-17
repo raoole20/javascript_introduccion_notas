@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Eventos</title>
+  </head>
+  <body>
+    <!--
+         En html existen varios metodos de capturar eventos, por ahora veremos el onclick
+         este peude contener una funcion o el propio codigo javascript
+
+         las mejores practicas que los eventos sean metodos a ejecutar
+      -->
+
+    <h1 onclick="this.innerHTML= 'Nuevo titulo' " id="titulo">Eventos</h1>
+
+    <!--Comparacion: evento con metodo-->
+    <!--Ya que en javaScript, las etiquetas se tranajan como objetos, podemos usar this, para referenciar al objeto-->
+
+    <!--Nota importante-->
+    <!--Se puede aplicar un cambio y metdos a los id directamente, con solo poner el nombre del metodo-->
+    <h1 onclick="metodo(this)" id="titulo2">Titulo 2</h1>
+    <p>Lorem, ipsum dolor.</p>
+
+    <button onclick="mostrar()">Evento</button><br />
+    <hr />
+
+    <script>
+      function metodo(text) {
+        console.log(text);
+        text.innerHTML = "Cambiando el tituo";
+      }
+    </script>
+  </body>
+</html>
